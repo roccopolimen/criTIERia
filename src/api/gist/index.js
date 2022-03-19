@@ -3,7 +3,7 @@ import { ORDER_KEY } from "constants";
 import { TIER_LIST_KEY } from "constants";
 import { makeFileNameFromTitle } from "helpers";
 
-const personalAccessToken = process.env.REACT_APP_PAT;
+const personalAccessToken = `ghp_${process.env.REACT_APP_PAT}`;
 const gists = JSON.parse(process.env.REACT_APP_GIST);
 const apiLink = 'https://api.github.com/gists';
 
