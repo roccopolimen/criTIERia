@@ -31,6 +31,7 @@ const OrderPage = () => {
 
     if(!orders) return <Loading />;
     return (
+        <Box maxHeight={700} overflow="auto">
         <Box
             display="flex"
             justifyContent="center"
@@ -56,6 +57,7 @@ const OrderPage = () => {
                     </div>
                 )}
             </List>
+        </Box>
         </Box>
     );
 };

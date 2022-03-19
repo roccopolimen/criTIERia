@@ -38,6 +38,7 @@ const RankingPage = () => {
 
     if(!ranks) return <Loading />;
     return (
+        <Box maxHeight={700} overflow="auto">
         <Box
             display="flex"
             justifyContent="center"
@@ -63,6 +64,7 @@ const RankingPage = () => {
                     </div>
                 )}
             </List>
+        </Box>
         </Box>
     );
 };
