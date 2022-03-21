@@ -1,4 +1,4 @@
-import { SpeedDial, useTheme } from '@mui/material';
+import { SpeedDial, Tooltip, useTheme } from '@mui/material';
 import { Box, Typography } from '@mui/material';
 import { Save } from "@material-ui/icons";
 import Loading from 'components/Loading';
@@ -119,11 +119,13 @@ const TierPage = () => {
                                 provided.draggableProps.style
                                 )}
                             >
-                                <img 
-                                    src={getImageUrlFromTitle(title, data)}
-                                    alt={title}
-                                    style={{height: 150, width: 100}}
-                                />
+                                <Tooltip title={title} followCursor>
+                                    <img 
+                                        src={getImageUrlFromTitle(title, data)}
+                                        alt={title}
+                                        style={{height: 150, width: 100}}
+                                    />
+                                </Tooltip>
                             </div>
                             )}
                         </Draggable>
