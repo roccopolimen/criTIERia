@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Changes
+### Major Changes
+Limit number of entries per tier and then drop down to grid tier? NEEDED
+Ability to rename entries w/o changing view order
+Implement Edit Rubric (go through all and rescore, stable sort the tier list)
+Implement Sync Scores for anime/manga to anilist api
+Implement non-privileged user to view results without edit access
+Make this more mobile friendly
+About Page (about site, about me)
+Store and use anilist id so ambiguous names are a non-issue
+Add comments per item?
+
+### Minor Changes
+press enter on image modal to change
+show title and maybe image in the edit score modal
+toggle to show percentage of each category in the table
+keep plus from spinning (use plus icon instead of speed dial icon?)
+adjust column width of the table to better match the data
+
+
 ## Available Scripts
 
 In the project directory, you can run:
