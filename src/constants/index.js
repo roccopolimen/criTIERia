@@ -22,7 +22,7 @@ export const tierColors = {
     "F": '#00bf1e'
 };
 
-export const PATH = 'media-scoring-website';
+export const PATH = 'criTIERia';
 export const TIER_KEY = 'ADMIN_TIERS.json';
 export const TIER_LIST_KEY = 'ADMIN_TIER_LIST.json';
 export const RUBRIC_KEY = 'ADMIN_RUBRIC.json';

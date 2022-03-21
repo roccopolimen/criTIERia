@@ -1,90 +1,81 @@
-# Getting Started with Create React App
+# cri-TIER-ia: A structured way to rank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Changes
-### Major Changes
-Limit number of entries per tier and then drop down to grid tier? NEEDED
-Ability to rename entries w/o changing view order
-Implement Edit Rubric (go through all and rescore, stable sort the tier list)
-Implement Sync Scores for anime/manga to anilist api
-Implement non-privileged user to view results without edit access
-Make this more mobile friendly
-About Page (about site, about me)
-Store and use anilist id so ambiguous names are a non-issue
-Add comments per item?
-
-### Minor Changes
-press enter on image modal to change
-show title and maybe image in the edit score modal
-toggle to show percentage of each category in the table
-keep plus from spinning (use plus icon instead of speed dial icon?)
-adjust column width of the table to better match the data
+The goal of **cri-TIER-ia** is simple: provide an additional mechanism for tier lists and ranking systems that incorporate a categorical grading system.
 
 
-## Available Scripts
 
-In the project directory, you can run:
+Let's use Television Shows as an example.
 
-### `npm start`
+You would essentially make a rubric for evaluating TV Shows such as:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Category                                             | Weight |
+| ---------------------------------------------------- | ------ |
+| Characters                                           | 25%    |
+| Story                                                | 20%    |
+| World Building                                       | 15%    |
+| Themes                                               | 15%    |
+| Visuals (Direction, Animation if applicable, Acting) | 15%    |
+| Sounds (Vocals, Soundtrack, Sound Effects)           | 10%    |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+After providing each category a score out of 10, the new show entry will now be given a grade, and assigned a TIER in a tier list based on the grade.
 
-### `npm test`
+For example, a score of 82 would correlated to a B+ tier in my Tier List ranking.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After grading your entries, you can then go to the Tier List page and move the entries within each tier to any order you want. You should order the shows that you *subjectively* like better, towards the left-hand side of the row.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Finally, based on the order of shows in your tier list from left-to-right and top-to-bottom, an ordered ranking will be formed on the ranking page. You now not only have an easy way to rank your shows, but also the reasoning behind why you ranked shows in that order!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Roadmap
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Ability to rename entries w/o changing view order
+* Implement non-privileged Access
+  * Others can view scores w/o logging in, just can't edit
+* Implement Edit Rubric page
+  * Be able to change the weights/categories for rubric
+  * Be able to change the score associated with each tier along with the tier's name
+  * Update all the data to reflect these changes
+  * Use stable adjustments when updating the tier list
+* Implement sync scores page
+  * Set up user auth w/ anilist API
+  * allow syncing of Manga and Anime scores based on ID.
+* Add About Page
+  * Describe what the website does
+  * Add screenshots to aid description
+  * Describe myself (about me)
+* Allow Comments per item
+  * potentially sync comments to anilist API as well
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Major Bugs
 
-## Learn More
+* Switch to using HashRouter instead of BrowserRouter
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  * this will help to get around 404 errors with how gh-pages does client side
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Use dnd-kit to implement Tier List
 
-### Code Splitting
+  * allow for grid drag and drop instead of only rows
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  * wrap entries so they do not overflow container
 
-### Analyzing the Bundle Size
+* Allow names to have a slash in them
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Make entire site mobile friendly
 
-### Making a Progressive Web App
+* Anime/Manga categories should store anilist ID
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  * avoid ambiguity
 
-### Advanced Configuration
+  * allow for more flexibility with name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Minor Quality of Life Changes
+* Press enter on image modal to change
+* Show title and maybe image in the edit score modal
+* Toggle to show percentage of each category in the table
+* Keep plus from spinning (use plus icon instead of speed dial icon?)
+* Adjust column width of the table to better match the data
