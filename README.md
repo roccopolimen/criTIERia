@@ -29,6 +29,20 @@ After grading your entries, you can then go to the Tier List page and move the e
 
 Finally, based on the order of shows in your tier list from left-to-right and top-to-bottom, an ordered ranking will be formed on the ranking page. You now not only have an easy way to rank your shows, but also the reasoning behind why you ranked shows in that order!
 
+## Screenshots
+
+![](C:\Users\rocco\Downloads\web-ss1.png)
+
+![](C:\Users\rocco\Downloads\web-ss2.png)
+
+![](C:\Users\rocco\Downloads\web-ss3.png)
+
+![](C:\Users\rocco\Downloads\web-ss4.png)
+
+![](C:\Users\rocco\Downloads\web-ss5.png)
+
+![](C:\Users\rocco\Downloads\web-ss6.png)
+
 ## Roadmap
 
 ### Features
